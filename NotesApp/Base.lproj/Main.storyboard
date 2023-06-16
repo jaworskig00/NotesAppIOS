@@ -240,7 +240,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Choose Location" id="BnL-2V-QPK">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="LKA-wd-K8U">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FKc-c8-Nqp">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FKc-c8-Nqp">
                                 <rect key="frame" x="349" y="7" width="45" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
