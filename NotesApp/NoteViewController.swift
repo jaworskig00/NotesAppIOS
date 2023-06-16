@@ -3,7 +3,7 @@ import CoreData
 import CoreLocation
 import Foundation
 
-class NoteViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, UITextViewDelegate {
+class NoteViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate, UITextViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descTextView: UITextView!
@@ -18,6 +18,7 @@ class NoteViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     override func viewDidLoad() {
         super.viewDidLoad()
         descTextView.delegate = self
+        titleTextField.delegate = self
         
         let numberToolbar = UIToolbar(frame:CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
         numberToolbar.barStyle = .default
@@ -26,6 +27,7 @@ class NoteViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneWithNumberPad))]
         numberToolbar.sizeToFit()
         descTextView.inputAccessoryView = numberToolbar
+        titleTextField.inputAccessoryView = numberToolbar
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
@@ -171,6 +173,7 @@ class NoteViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @objc func doneWithNumberPad() {
         descTextView.resignFirstResponder()
+        titleTextField.resignFirstResponder()
     }
     
     @objc func labelTapped() {
