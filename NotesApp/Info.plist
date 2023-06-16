@@ -17,6 +17,10 @@
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
 					<string>Main</string>
+					<key>UISupportedInterfaceOrientations</key>
+					<array>
+						<string>UIInterfaceOrientationPortrait</string>
+					</array>
 				</dict>
 			</array>
 		</dict>
